@@ -1,7 +1,0 @@
-from pwn import *
-
-# netcat to the server
-
-p = remote("host3.dreamhack.games", 8777)
-p.interactive()
-#DH{5cc72596cba7104569abb37f71b8ccf3}
