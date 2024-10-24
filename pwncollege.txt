@@ -313,3 +313,7 @@ level1
 pwn.college{4ajN95doe0dZBqZTjg2jMUolh_p.0FN0IDL2EzNyYzW}
 level2
 pwn.college{QFOYLcvHk_W9yGtKNmuWKtgfe4q.0VN0IDL2EzNyYzW}
+
+Dynamic Allocator Misuse
+level1.0
+pwn.college{YJiFWw9YsJ8wdootnkrHbh66vAH.0VM3MDL2EzNyYzW}
