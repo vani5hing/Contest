@@ -313,6 +313,12 @@ level1
 pwn.college{4ajN95doe0dZBqZTjg2jMUolh_p.0FN0IDL2EzNyYzW}
 level2
 pwn.college{QFOYLcvHk_W9yGtKNmuWKtgfe4q.0VN0IDL2EzNyYzW}
+level3
+pwn.college{8G7rxO0hF67mys_5BVxcO3Apw6C.0lN0IDL2EzNyYzW}
+level4
+pwn.college{g5G1_1DjfrMtTEG-kTnE6lJL_wE.01N0IDL2EzNyYzW}
+level5
+pwn.college{g1M7FffjR6Kbl0w0VHt7eTePMiy.0FO0IDL2EzNyYzW}
 
 Dynamic Allocator Misuse
 level1.0
